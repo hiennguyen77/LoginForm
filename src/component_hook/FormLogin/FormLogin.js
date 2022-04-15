@@ -3,8 +3,8 @@ import './Form.css';
 
 
 function FormLogin() {
-  const [email, setEmail] = useState();
-  const [pass, setPass] = useState();
+  const [email, setEmail] = useState('');
+  const [pass, setPass] = useState('');
   const handleLogin = (e)=> {
     e.preventDefault()
     const Account = {
@@ -13,6 +13,10 @@ function FormLogin() {
     }
     const AccountJson = JSON.stringify(Account)
     localStorage.setItem('account', AccountJson);
+    alert('Đăng nhập thành công')
+    setEmail('')
+    setPass('')
+    
 
   }
 
@@ -41,8 +45,8 @@ function FormLogin() {
           <div className='loginAcc'>
 
           <form className='login' onSubmit={handleLogin}>
-            <input  onChange={handleEmail} className='input' placeholder ='Email hoặc số điện thoại'/>
-            <input type ='password'  onChange={handlePassWord} className='input' placeholder ='Mật khẩu'/>
+            <input value={email} onChange={handleEmail} className='input' placeholder ='Email hoặc số điện thoại'/>
+            <input value={pass} type ='password'  onChange={handlePassWord} className='input' placeholder ='Mật khẩu'/>
             <button className='btn'>
               Đăng nhập
             </button>
