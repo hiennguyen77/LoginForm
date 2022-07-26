@@ -1,0 +1,172 @@
+@import "../../Responsive/mixin.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+
+.App {
+  padding-bottom: 112px;
+  padding-top: 72px;
+  background-color: #f0f2f5;
+  @include responsive_414 {
+    padding-top: 0;
+  }
+}
+
+.Form {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+  width: 980px;
+  @include responsive_414 {
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header {
+  display: inline-block;
+  margin-right: 15.999px;
+  vertical-align: top;
+  width: 565px;
+  @include responsive_414 {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.img {
+  position: relative;
+  left: -11px;
+  padding: 49px 0px 0px;
+  @include responsive_414 {
+    position: static;
+    display: inline-block;
+  }
+}
+
+.logo {
+  height: 96px;
+  width: 280px;
+  @include responsive_414 {
+    width: 250px;
+    height: 70px;
+  }
+}
+.describe {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  width: 500px;
+  @include responsive_414 {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.loginAcc {
+  width: 360px;
+  height: 396px;
+  @include responsive_414 {
+    width: 100%;
+  }
+}
+
+.login {
+  background-color: #fff;
+  width: 360px;
+  height: 366px;
+  border-radius: 6px;
+  margin: auto;
+  padding: 8px 5px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+.input {
+  font-size: 17px;
+  margin: 8px 10px;
+  padding: 14px 16px;
+  width: 330px;
+  border: 1px solid rgb(226, 224, 224);
+  border-radius: 6px;
+}
+.input:focus {
+  border: 1px solid #1877f2;
+}
+.btn {
+  display: block;
+  margin: 8px 8px;
+  background-color: #1877f2;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
+  width: 332px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #1877f2;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.line {
+  align-items: center;
+  border-bottom: 1px solid #dadde1;
+  display: flex;
+  margin: 20px 16px;
+  text-align: center;
+}
+.createAcc {
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 48px;
+  padding: 0 16px;
+  background-color: #42b72a;
+  margin: 16px 90px;
+  cursor: pointer;
+}
+.createAcc_link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer {
+  display: block;
+
+  border-top: none;
+  color: #1c1e21;
+  font-size: 14px;
+  font-weight: normal;
+  padding-top: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer_link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
