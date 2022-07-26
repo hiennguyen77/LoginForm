@@ -34,7 +34,7 @@ function FormLogin() {
       setErr("Vui lòng điền tài khoản");
     }
   };
-  console.log(err);
+
   // handleEmail
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -88,9 +88,7 @@ function FormLogin() {
               Quên mật khẩu ?
             </a>
             <div className="line"></div>
-            <button className="createAcc">
-              <a className="createAcc_link">Tạo tài khoản mới</a>
-            </button>
+            <button className="createAcc">Tạo tài khoản mới</button>
           </form>
           <div className="footer">
             <a
